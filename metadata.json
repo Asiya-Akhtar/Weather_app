@@ -1,0 +1,5 @@
+{
+  "name": "Weather_App",
+  "description": "A beautifully designed weather application providing current, hourly, and daily forecasts with an intuitive and responsive interface.",
+  "requestFramePermissions": []
+}

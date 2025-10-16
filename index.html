@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cirrus Weather</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              background: 'var(--bg)',
+              panel: 'var(--panel)',
+              surface: 'var(--surface)',
+              text: 'var(--text)',
+              muted: 'var(--muted)',
+              accent: 'var(--accent)',
+              'accent-200': 'var(--accent-200)',
+              ring: 'var(--ring)',
+            },
+            borderRadius: {
+              'panel': '24px',
+              'card': '16px',
+            },
+            boxShadow: {
+              'soft': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --bg: #E9F2FF;
+        --panel: #F7FAFF;
+        --surface: #FFFFFF;
+        --text: #0F172A;
+        --muted: #64748B;
+        --accent: #3B82F6;
+        --accent-200: #BFDBFE;
+        --ring: #60A5FA;
+      }
+      :root.dark {
+        --bg: #0F172A;
+        --panel: #1E293B;
+        --surface: #293548;
+        --text: #F1F5F9;
+        --muted: #94A3B8;
+        --accent: #60A5FA;
+        --accent-200: #3B82F6;
+        --ring: #3B82F6;
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: 'Inter', sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .recharts-tooltip-cursor {
+        stroke: var(--accent);
+        stroke-width: 1px;
+        stroke-dasharray: 5 5;
+      }
+      .recharts-cartesian-grid-line line {
+        stroke: var(--muted);
+        opacity: 0.3;
+      }
+       .recharts-text {
+        fill: var(--muted);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@tanstack/react-query": "https://aistudiocdn.com/@tanstack/react-query@^5.90.2",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+    "date-fns": "https://aistudiocdn.com/date-fns@^4.1.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.545.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^3.3.1",
+    "zustand/": "https://aistudiocdn.com/zustand@^5.0.8/",
+    "zustand": "https://aistudiocdn.com/zustand@^5.0.8",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "use-debounce": "https://aistudiocdn.com/use-debounce@^10.0.6"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
